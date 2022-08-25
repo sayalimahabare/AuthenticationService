@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sayalimahabareauthenticationservice 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sayalimahabareauthenticationservice
+  template:
+    metadata:
+      labels:
+        app: sayalimahabareauthenticationservice 
+    spec:
+      containers:
+        - name: sayalimahabareauthenticationservice 
+          image: pensioncontainerregistery.azurecr.io/sayalimahabareauthenticationservice
+          ports:
+          - containerPort: 80
